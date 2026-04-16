@@ -43,18 +43,18 @@
 
   <h2>Overview</h2>
   <p>PlumbTally is a job-tracking tool for plumbers and tradespeople. We collect only the data necessary to provide the service. We do not sell your data to third parties.</p>
-  <p>This policy applies to the PlumbTally mobile app (Android) and the web app at <a href="https://plumb-tally.vercel.app">plumb-tally.vercel.app</a>.</p>
-  <p>Last updated: <strong>April 1, 2026</strong>.</p>
+  <p>This policy applies to the PlumbTally mobile app (Android).</p>
+  <p>Last updated: <strong>April 14, 2026</strong>.</p>
 
   <hr class="divider" />
 
   <h2>Data we collect</h2>
   <ul>
-    <li><strong>Account:</strong> your email address and, if you sign in with Google, your Google profile name and avatar URL.</li>
-    <li><strong>Business profile:</strong> company name, phone number, address, and VAT number — entered by you, optional.</li>
-    <li><strong>Projects &amp; jobs:</strong> project names, client details, line items, quantities, prices, and payment records you create.</li>
-    <li><strong>Subscription status:</strong> trial start date and subscription tier.</li>
-    <li><strong>Translation requests:</strong> item description text sent to our translation service when you use the auto-translate feature.</li>
+    <li><strong>Account:</strong> your email address and, if you sign in with Google, your Google profile name and avatar URL. Stored on Supabase servers.</li>
+    <li><strong>Business profile:</strong> company name, phone number, address, VAT number, and bank account details (IBAN, SWIFT, account number) — entered by you, optional, used only to populate PDF receipts. Stored locally on your device only (not uploaded to our servers).</li>
+    <li><strong>Projects &amp; jobs:</strong> project names, line items, quantities, prices, and payment records you create. Stored locally on your device only.</li>
+    <li><strong>Subscription status:</strong> trial start date and subscription tier. Stored on Supabase servers.</li>
+    <li><strong>Translation requests:</strong> item description text sent to our translation service when you use the auto-translate feature. Processed transiently, not stored.</li>
   </ul>
 
   <hr class="divider" />
@@ -72,9 +72,9 @@
 
   <h2>How we use your data</h2>
   <ul>
-    <li>To authenticate you and keep your data secure.</li>
-    <li>To store and sync your projects across devices.</li>
-    <li>To translate item descriptions into other languages (text is sent to OpenAI via our Supabase edge function and is not stored).</li>
+    <li>To authenticate you and keep your account secure.</li>
+    <li>To store your projects, line items, and payments on your device (data does not leave the device unless you explicitly export a backup).</li>
+    <li>To translate item descriptions into other languages (text is sent transiently to OpenAI via our Supabase edge function and is not stored by us or OpenAI).</li>
     <li>To manage your subscription and trial period.</li>
   </ul>
 
@@ -85,13 +85,14 @@
     <li><strong>Supabase</strong> — database, authentication, and edge functions. Data is stored in the EU (Frankfurt). <a href="https://supabase.com/privacy">Privacy policy</a>.</li>
     <li><strong>Google Sign-In</strong> — optional authentication provider. <a href="https://policies.google.com/privacy">Privacy policy</a>.</li>
     <li><strong>OpenAI</strong> — used only for item translation. Text is processed transiently and not stored by us. <a href="https://openai.com/policies/privacy-policy">Privacy policy</a>.</li>
-    <li><strong>Vercel</strong> — hosts the web app. <a href="https://vercel.com/legal/privacy-policy">Privacy policy</a>.</li>
+    <li><strong>Vercel</strong> — hosts this privacy policy and the account deletion page (static HTML only; no user data is processed by Vercel). <a href="https://vercel.com/legal/privacy-policy">Privacy policy</a>.</li>
   </ul>
 
   <hr class="divider" />
 
   <h2>Data retention</h2>
-  <p>Your data is retained for as long as your account is active. When you delete your account, all data is deleted immediately and permanently — including your profile, projects, items, payments, and subscription records.</p>
+  <p>Account and subscription data on our servers is retained for as long as your account is active. When you delete your account, all server-side data is deleted immediately and permanently — including your account credentials and subscription records.</p>
+  <p>Projects, items, payments, and your business profile are stored locally on your device and are not held on our servers. Deleting the app removes this data from your device. Use the built-in backup export (Profile → Export backup) to save a copy before uninstalling.</p>
 
   <hr class="divider" />
 
@@ -99,7 +100,7 @@
   <ul>
     <li><strong>Access:</strong> all your data is visible inside the app.</li>
     <li><strong>Deletion:</strong> delete your account at any time via Profile → Delete account, or by emailing us. See the <a href="/delete-account.html">account deletion page</a>.</li>
-    <li><strong>Export:</strong> contact us to request a copy of your data.</li>
+    <li><strong>Export:</strong> export all your projects, items, payments, and profile at any time via Profile → Export backup (JSON file saved to your device). No need to contact us.</li>
   </ul>
 
   <hr class="divider" />
